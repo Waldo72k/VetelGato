@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Breezed HTML Bootstrap Template</title>
+    <title>Vet el GATO</title>
 
 <!--
 
@@ -58,9 +58,9 @@ https://templatemo.com/tm-543-breezed
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                            <li class="scroll-to-section"><a href="/acerca">Acerca</a></li>
-                            <li class="scroll-to-section"><a href="#projects">Projects</a></li>
+                            <li class="scroll-to-section"><a href="{{route('index')}}" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{route('acerca')}}">Acerca</a></li>
+                            
                             <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
                                 <ul>
@@ -70,10 +70,7 @@ https://templatemo.com/tm-543-breezed
                                     <li><a href="">Blog</a></li>
                                 </ul>
                             </li>
-                            <li class="scroll-to-section"><a href="#contact-us">Contact Us</a></li> 
-                            <div class="search-icon">
-                                <a href="#search"><i class="fa fa-search"></i></a>
-                            </div>
+                            <li class="scroll-to-section"><a href="{{route('auth.login')}}">Iniciar sesion</a></li> 
                         </ul>        
                         <a class='menu-trigger'>
                             <span>Menu</span>
