@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AcercaController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\CitasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,8 +38,10 @@ Route::group(['middleware'=>['AuthCheck']], function(){
     
     Route::get('/admin/dashboard',[MainController::class, 'dashboard']);
 
+
     Route::get('/admin/settings',[MainController::class, 'settings']);
     Route::get('/admin/profile',[MainController::class, 'profile']);
     Route::get('/admin/staff',[MainController::class, 'staff']);
-
+    Route::resource('/admin/citas', CitasController::class);
+    
 });

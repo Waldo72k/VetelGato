@@ -29,6 +29,7 @@ https://templatemo.com/tm-543-breezed
     <link rel="stylesheet" href="{{ asset('css/owl-carousel.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
 </head>
     

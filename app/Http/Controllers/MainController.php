@@ -57,7 +57,7 @@ class MainController extends Controller
             //chckeo del password
             if(Hash::check($request->password, $userInfo->password)){
                 $request->session()->put('LoggedUser',$userInfo->id);
-                return redirect('admin/dashboard');
+                return redirect('/admin/dashboard');
             }else{
                 return back()->with('fail','Contraseña incorrecta');
             }
@@ -76,9 +76,14 @@ class MainController extends Controller
         return view('admin.dashboard', $data);
     }
 
-    function settings(){
+    function citas(){
         $data=['LoggedUserInfo'=>Admin::where('id','=', session('LoggedUser'))->first()];
-        return view('admin.settings', $data);
+        return view('admin.citasinicio', $data);
+    }
+
+    function citas_crear(){
+        $data=['LoggedUserInfo'=>Admin::where('id','=', session('LoggedUser'))->first()];
+        return view('admin.citas_crear', $data);
     }
     
     function profile(){

@@ -21,6 +21,7 @@ https://templatemo.com/tm-543-breezed
     <!-- Additional CSS Files -->
     @vite(['./resources/js/app.js', 'resources/css/app.scss'])
     
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
 
