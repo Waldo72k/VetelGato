@@ -34,7 +34,7 @@ class CitasController extends Controller
         $cita = new Cita();
         $cita->cliente_id = $cliente_id;
         $cita->mascota = $request->mascota;
-        $cita->dia = $request->dia;
+        $cita->date = $request->date;
         $cita->hora = $request->hora;
         $cita->save();
         return redirect()->route('dashboard');
@@ -53,7 +53,7 @@ class CitasController extends Controller
      */
     public function edit(Cita $cita)
     {
-        //
+        return view('admin.citas_editar')->with(compact('cita'));
     }
 
     /**
@@ -61,7 +61,8 @@ class CitasController extends Controller
      */
     public function update(Request $request, Cita $cita)
     {
-        //
+        $cita->fill($request->input())->saveOrFail();
+        return redirect()->route('citas.index');
     }
 
     /**
@@ -69,6 +70,7 @@ class CitasController extends Controller
      */
     public function destroy(Cita $cita)
     {
-        //
+        $cita->delete();
+        return redirect()->route('citas.index');
     }
 }
