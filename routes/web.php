@@ -37,11 +37,6 @@ Route::get('/auth/logout',[MainController::class, 'logout'])->name('auth.logout'
 Route::group(['middleware'=>['AuthCheck']], function(){
     
     Route::get('/admin/dashboard',[MainController::class, 'dashboard'])->name('dashboard');
-
-
-    Route::get('/admin/settings',[MainController::class, 'settings']);
-    Route::get('/admin/profile',[MainController::class, 'profile']);
-    Route::get('/admin/staff',[MainController::class, 'staff']);
     Route::resource('/admin/citas', CitasController::class);
     
 });
