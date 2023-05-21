@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('mascota')->nullable();
             $table->date('date');
             $table->time('hora');
+            $table->string('seleccion')->nullable();
             $table->timestamps();
             $table->foreign('cliente_id')
                 ->references('id')->on('admins')->onDelete('cascade');

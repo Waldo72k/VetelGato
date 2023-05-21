@@ -16,7 +16,7 @@
 <tbody>
 @foreach($citas as $cita)
 <tr>
-<td>{{$cita->date}} Hora: {{$cita->hora}} Mascota {{$cita->mascota}}</td>
+<td>{{$cita->date}} Hora: {{$cita->hora}} Mascota {{$cita->mascota}} Con {{$cita->seleccion}}</td>
 <td>
 <a class="btn btn-warning" href="{{route("citas.edit",[$cita])}}">
 <i class="fa fa-edit"></i>

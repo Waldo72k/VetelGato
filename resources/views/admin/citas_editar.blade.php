@@ -19,6 +19,13 @@
                 <label for="hora">Hora</label>
                 <input type="time" class="form-control" name="hora" id="hora" value="{{$cita->hora}}">
             </div>
+            <div class="form-group">
+                <label for="seleccion">Seleccione si su cita es con el veterinario o con el estilista</label>
+                <select name="seleccion" id="seleccion" class="form-control">
+                    <option value="veterinario">Veterinario</option>
+                    <option value="estilista">Estilista</option>
+                  </select>
+            </div>
             <button type="submit" class="btn btn-primary">Crear cita</button>
         </fieldset>
     </form>

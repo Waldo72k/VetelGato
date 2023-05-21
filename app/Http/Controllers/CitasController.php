@@ -40,15 +40,18 @@ class CitasController extends Controller
         $cita->mascota = $request->mascota;
         $cita->date = $request->date;
         $cita->hora = $request->hora;
+        $cita->seleccion = $request->seleccion;
         $cita->save();
         $details = [
             'mascota' => $request->mascota,
             'date' => $request->date,
-            'hora' => $request->hora
+            'hora' => $request->hora,
+            'seleccion' => $request->seleccion
         ];
         $usuario = Admin::where('id',$cliente_id)->first();
         $correo = $usuario->email;
-        //dd($correo);
+
+        // dd($request->seleccion);
         //cambia el correo por la variable $correo
         Mail::to($correo)->send(new CitasConfirmaMail($details));
         return redirect()->route('dashboard');
