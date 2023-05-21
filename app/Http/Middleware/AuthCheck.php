@@ -16,7 +16,7 @@ class AuthCheck
     {
 
         if(!session()->has('LoggedUser') && ($request->path() !='auth/login' && $request->path() !='auth/register' )){
-            return redirect('auth/login')->with('fail','Desde de estar logeado para acceder');
+            return redirect('auth/login')->with('fail','Debe de estar logeado para acceder');
         }
 
         if(session()->has('LoggedUser') && ($request->path() =='auth/login' || $request->path() == 'auth/register') ){

@@ -38,7 +38,7 @@ https://templatemo.com/tm-543-breezed
 
 
 <div class="container">
-    <div class="row" style="margin-top:45px"> <div class="col-md-4 col-md-offset-4"> <h4>Login | Custom Auth</h4><hr> 
+    <div class="row" style="margin-top:45px"> <div class="col-md-4 col-md-offset-4"> <h4>Login | Vet el Gato</h4><hr> 
         <form action="{{route('auth.check')}}" method="post">
             @if(Session::get('fail'))
                 <div class="alert alert-danger">

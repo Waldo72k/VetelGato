@@ -60,9 +60,8 @@ https://templatemo.com/tm-543-breezed
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li class="scroll-to-section"><a href="{{route('index')}}" class="active">Home</a></li>
+                            <li class="scroll-to-section"><a href="{{route('dashboard')}}" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="/admin/citas">Agendar Cita</a></li> 
-                            <li class="scroll-to-section"><a href="{{route('acerca')}}">Acerca</a></li>
                             
                             <li class="submenu">
                                 <a href="javascript:;">Drop Down</a>
